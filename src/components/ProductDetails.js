@@ -6,15 +6,9 @@ import "./ProductDetails.css";
 function ProductDetails({ product }) {
   const modelViewerContainer = useRef(null);
 
-  const view3D = () => {
-    if (modelViewerContainer.current) {
-      modelViewerContainer.current.innerHTML = `<model-viewer src="${product.model}" ar-scale="auto" auto-rotate camera-controls style="width: 80%; height: 500px; margin: auto;"></model-viewer>`;
-    }
-  };
-
   const viewAR = () => {
     if (modelViewerContainer.current) {
-      modelViewerContainer.current.innerHTML = `<model-viewer src="${product.model}" ar ar-scale="auto" camera-controls style="width: 80%; height: 500px; margin: auto;"></model-viewer>`;
+      modelViewerContainer.current.innerHTML = `<model-viewer src="${product.model}" ar ar-scale="auto" camera-controls style="width: 100%; height: 500px; margin: auto;"></model-viewer>`;
     }
   };
 
@@ -49,7 +43,6 @@ function ProductDetails({ product }) {
         </table>
         <div className="view-buttons">
           <button onClick={viewAR}>View in your space (AR)</button>
-          <button onClick={view3D}>View in 3D</button>
         </div>
         <div ref={modelViewerContainer} id="model-viewer-container"></div>
       </div>
