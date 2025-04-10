@@ -1,9 +1,23 @@
 // src/components/ProductDetails.js
-import React from "react";
+import React, { useRef } from "react";
 import "@google/model-viewer";
-import "./ProductDetails.css"; // Create this CSS file
+import "./ProductDetails.css";
 
 function ProductDetails({ product }) {
+  const modelViewerContainer = useRef(null);
+
+  const view3D = () => {
+    if (modelViewerContainer.current) {
+      modelViewerContainer.current.innerHTML = `<model-viewer src="${product.model}" ar-scale="auto" auto-rotate camera-controls style="width: 80%; height: 500px; margin: auto;"></model-viewer>`;
+    }
+  };
+
+  const viewAR = () => {
+    if (modelViewerContainer.current) {
+      modelViewerContainer.current.innerHTML = `<model-viewer src="${product.model}" ar ar-scale="auto" camera-controls style="width: 80%; height: 500px; margin: auto;"></model-viewer>`;
+    }
+  };
+
   return (
     <div className="product-details">
       <div className="product-image">
@@ -34,23 +48,10 @@ function ProductDetails({ product }) {
           </tbody>
         </table>
         <div className="view-buttons">
-          <button
-            onClick={() => {
-              let detailsContent = document.getElementById("details-content");
-              detailsContent.innerHTML += `<model-viewer src="${product.model}" ar ar-scale="auto" camera-controls style="width: 80%; height: 500px; margin: auto;"></model-viewer>`;
-            }}
-          >
-            View in your space (AR)
-          </button>
-          <button
-            onClick={() => {
-              let detailsContent = document.getElementById("details-content");
-              detailsContent.innerHTML += `<model-viewer src="${product.model}" ar-scale="auto" auto-rotate camera-controls style="width: 80%; height: 500px; margin: auto;"></model-viewer>`;
-            }}
-          >
-            View in 3D
-          </button>
+          <button onClick={viewAR}>View in your space (AR)</button>
+          <button onClick={view3D}>View in 3D</button>
         </div>
+        <div ref={modelViewerContainer} id="model-viewer-container"></div>
       </div>
     </div>
   );
