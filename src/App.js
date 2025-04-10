@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React, { useState } from "react";
+import products from "./products";
+import ProductList from "./components/ProductList";
+import ProductDetails from "./components/ProductDetails";
+import "./App.css";
 
 function App() {
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [currentCategory, setCurrentCategory] = useState(null);
+
+  const showProducts = (category) => {
+    setCurrentCategory(category);
+    setSelectedProduct(null);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <h1>Vijay Sales</h1>
+        <nav>
+          <button onClick={() => setCurrentCategory(null)}>Home</button>
+          <button onClick={() => showProducts("washingMachines")}>
+            Washing Machines
+          </button>
+        </nav>
       </header>
+      <main>
+        {currentCategory && !selectedProduct && (
+          <ProductList
+            products={products[currentCategory]}
+            onSelect={setSelectedProduct}
+          />
+        )}
+        {selectedProduct && <ProductDetails product={selectedProduct} />}
+      </main>
     </div>
   );
 }
