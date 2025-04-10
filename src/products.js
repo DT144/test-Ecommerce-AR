@@ -1,39 +1,39 @@
 // src/products.js
 const products = {
-  washingMachines: [
+  tvs: [
     {
-      id: "wm1",
-      name: "Whirlpool Stainwash Pro 7.5 kg 5 Star Fully Automatic Top Load Washing Machine",
-      price: 25990,
-      image: "whirlpool-wm.jpg", // Replace with your image
-      model: "whirlpool-wm.glb", // Replace with your 3D model
+      id: "tv1",
+      name: "Samsung 138 cm (55 inches) DU8300 Crystal 4K UHD Smart TV",
+      price: 58990,
+      image: "samsung-tv.jpg", // Replace with your image
+      model: "samsung-tv.glb", // Replace with your 3D model
       description: `
-          Fully Automatic Top Load Washing Machine with In-Built Heater, Express Wash, Spiro Wash Action (Black)
-          <ul>
-            <li>7.5 kg capacity, suitable for medium-sized families</li>
-            <li>5 Star Energy Rating for efficient power consumption</li>
-            <li>In-Built Heater for effective stain removal</li>
-            <li>Express Wash for quick cleaning</li>
-            <li>Spiro Wash Action for superior cleaning performance</li>
-            <li>Color: Black</li>
-          </ul>
-        `,
+        Samsung 138 cm (55 inches) DU8300 Crystal 4K UHD Smart TV with Crystal Processor 4K (UA55DU8300) (2024 Model Edition)
+        <ul>
+          <li>Crystal Processor 4K: Upscale every content to 4K resolution</li>
+          <li>PurColor: Fine tuned color for a vibrant, lifelike picture</li>
+          <li>Smart Hub: Discover your favorite movies, TV shows, games and ambient screens all in one place</li>
+          <li>Multiple Voice Assistants: Choose your favorite voice assistant; Bixby, Amazon Alexa or Google Assistant</li>
+          <li>Motion Xcelerator: Experience smooth action and clear motion</li>
+        </ul>
+      `,
       features: [
-        "In-Built Heater",
-        "Express Wash",
-        "Spiro Wash Action",
-        "5 Star Energy Rating",
-        "7.5 kg Capacity",
+        "Crystal Processor 4K",
+        "PurColor",
+        "Smart Hub",
+        "Multiple Voice Assistants",
+        "Motion Xcelerator",
+        "4K UHD Resolution",
       ],
       specifications: {
-        capacity: "7.5 kg",
-        energyRating: "5 Star",
-        color: "Black",
-        washType: "Fully Automatic Top Load",
-        heater: "Yes",
+        screenSize: "138 cm (55 inches)",
+        resolution: "4K UHD (3840 x 2160)",
+        processor: "Crystal Processor 4K",
+        smartTV: "Yes",
+        voiceControl: "Bixby, Alexa, Google Assistant",
       },
     },
-    // ... other washing machines
+    // ... other TVs
   ],
   // ... other product categories
 };

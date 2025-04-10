@@ -20,9 +20,7 @@ function App() {
         <h1>Vijay Sales</h1>
         <nav>
           <button onClick={() => setCurrentCategory(null)}>Home</button>
-          <button onClick={() => showProducts("washingMachines")}>
-            Washing Machines
-          </button>
+          <button onClick={() => showProducts("tvs")}>TVs</button>
         </nav>
       </header>
       <main>
