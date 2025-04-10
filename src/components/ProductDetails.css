@@ -1,17 +1,25 @@
 /* src/components/ProductDetails.css */
+
 .product-details {
   display: flex;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
   justify-content: space-around;
   padding: 20px;
 }
 
+.product-image,
+.product-info {
+  width: 100%; /* Take full width on smaller screens */
+  box-sizing: border-box; /* Include padding and border in width */
+}
+
 .product-image img {
-  max-width: 400px;
+  max-width: 100%;
   height: auto;
 }
 
 .product-info {
-  max-width: 600px;
+  max-width: 100%; /* Take full width on smaller screens */
 }
 
 .price {
@@ -44,4 +52,21 @@ table td {
   color: white;
   border: none;
   cursor: pointer;
+  width: 100%; /* Take full width on smaller screens */
+  box-sizing: border-box; /* Include padding and border in width */
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .product-image {
+    width: 40%; /* Take 40% width on larger screens */
+  }
+
+  .product-info {
+    width: 55%; /* Take 55% width on larger screens */
+  }
+
+  .view-buttons button {
+    width: auto; /* Buttons take auto width on larger screens */
+  }
 }
