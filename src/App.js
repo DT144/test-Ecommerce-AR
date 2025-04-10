@@ -1,7 +1,7 @@
-import React from 'react';
-import products from './products';
-import ProductDetails from './components/ProductDetails';
-import './App.css';
+import React from "react";
+import products from "./products";
+import ProductDetails from "./components/ProductDetails";
+import "./App.css";
 
 function App() {
   const tvProduct = products.tvs[0];
@@ -16,5 +16,6 @@ function App() {
       </main>
     </div>
   );
+}
 
 export default App;
