@@ -17,6 +17,7 @@
   height: auto;
   border: 1px solid #ddd;
   border-radius: 8px;
+  margin-bottom: 20px;
 }
 
 .product-info {
@@ -51,17 +52,21 @@ table td {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .view-buttons button {
   padding: 15px 30px;
-  margin: 0 10px;
+  margin: 0 auto; /* Center the button */
+  display: block; /* Full width on small screens */
   background-color: #28a745;
   color: white;
   border: none;
   cursor: pointer;
   border-radius: 8px;
   font-size: 1.1em;
+  white-space: nowrap;
+  width: 80%; /* Match container width */
 }
 
 #model-viewer-container {
@@ -76,5 +81,11 @@ table td {
 
   .product-info {
     width: 55%;
+  }
+
+  .view-buttons button {
+    width: auto; /* Auto width on larger screens */
+    display: inline-block; /* Inline block on larger screens */
+    margin: 10px; /* Adjust margin */
   }
 }
