@@ -1,11 +1,10 @@
-// src/App.js
 import React from "react";
 import products from "./products";
 import ProductDetails from "./components/ProductDetails";
 import "./App.css";
 
 function App() {
-  const tvProduct = products.tvs[0]; // Get the first TV product
+  const tvProduct = products.tvs[0];
 
   return (
     <div className="App">

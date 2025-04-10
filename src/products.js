@@ -1,12 +1,11 @@
-// src/products.js
 const products = {
   tvs: [
     {
       id: "tv1",
       name: "Samsung 138 cm (55 inches) DU8300 Crystal 4K UHD Smart TV",
       price: 58990,
-      image: "samsung-tv.jpg", // Replace with your image
-      model: "samsung-tv.glb", // Replace with your 3D model
+      image: "samsung-tv.jpg",
+      model: "samsung-tv.glb",
       description: `
         Samsung 138 cm (55 inches) DU8300 Crystal 4K UHD Smart TV with Crystal Processor 4K (UA55DU8300) (2024 Model Edition)
         <ul>
@@ -33,9 +32,7 @@ const products = {
         voiceControl: "Bixby, Alexa, Google Assistant",
       },
     },
-    // ... other TVs
   ],
-  // ... other product categories
 };
 
 export default products;
